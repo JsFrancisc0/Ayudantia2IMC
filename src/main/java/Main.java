@@ -5,6 +5,10 @@ public class Main {
     public static void main (String[] args){
 
 
+
+        System.out.println(calcularPromedio(scNumero(), scNumero(), scNumero()));
+
+
     }
 
     public String scTexto(){
@@ -16,13 +20,15 @@ public class Main {
         return texto;
     }
 
-    public double scNumero(){
+    public static double scNumero(){
 
         Scanner sc = new Scanner(System.in);
 
+        double num;
+
         do {
 
-            double num = sc.nextDouble();
+            num = sc.nextDouble();
 
             if (num<=0){
 
@@ -32,6 +38,23 @@ public class Main {
 
         return num;
     }
+
+    public double calcularImc(double peso, double estatura){
+
+        double imc= peso/(estatura*estatura);
+
+        return imc;
+    }
+
+    public static double calcularPromedio(double n1, double n2, double n3){
+
+        double sum = n1+n2+n3;
+        double promedio= sum/3;
+
+        return promedio;
+    }
+
+
 
 
 
